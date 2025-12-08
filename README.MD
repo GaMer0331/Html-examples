@@ -22,7 +22,7 @@
             padding-bottom: 5px;
         }
 
-        .w3school {
+        .enter {
             background-color: #112A46; /* Tugma foni - To'q Ko'k (Asosiy) */
             color: white; /* Tugma matni - Oq */
             padding: 10px 15px;
@@ -31,7 +31,7 @@
             cursor: pointer; /* Sichqoncha ustiga borganda ko'rsatkich o'zgaradi */
         }
 
-        .w3school:hover {
+        .enter:hover {
             background-color: #0d1e33; /* Sichqoncha ustiga borganda biroz to'qlashadi */
         }
     </style>
@@ -45,7 +45,7 @@
     </p>
 <a 
         href="/Beginning.html" 
-        class="w3school"
+        class="enter"
         target="_blank"
     >
         ENTER
