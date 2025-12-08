@@ -1,10 +1,9 @@
 <html>
-<head><title>Main</title></head>
 <body>
 <a 
-        href="https://www.emaktab.uz" 
+        href="Beginning.html" 
     >
-        Emaktabga o'tish
+        Kirish
     </a>
 </body>
 </html>
