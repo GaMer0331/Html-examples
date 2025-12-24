@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Mening qahramonim – Abbosbek Fayzullayev</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Mening qahramonim – futbolchi Abbosbek Fayzullayev. Uning kuchlari, tarixi, maydondagi o‘yini va menga bergan ilhomi.">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #020617;
+            color: #f9fafb;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(2, 6, 23, 0.96);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0.6rem 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            font-size: 0.95rem;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav a {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1.5rem 1.2rem 3rem;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+            gap: 2rem;
+            align-items: center;
+            padding: 2.2rem 2rem;
+            margin-top: 1.5rem;
+            border-radius: 18px;
+            background:
+                    radial-gradient(circle at top left, #0ea5e9 0, transparent 45%),
+                    radial-gradient(circle at bottom right, #22c55e 0, transparent 45%),
+                    #020617;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.75);
+        }
+
+        .tagline {
+            display: inline-block;
+            padding: 0.18rem 0.7rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            background: rgba(34, 197, 94, 0.12);
+            border: 1px solid rgba(34, 197, 94, 0.7);
+            color: #bbf7d0;
+            margin-bottom: 0.9rem;
+        }
+
+        .hero-title {
+            font-size: 2.1rem;
+            margin: 0 0 0.4rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.05rem;
+            color: #dbeafe;
+            margin-bottom: 0.8rem;
+        }
+
+        .hero-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 0.7rem;
+            margin-top: 0.7rem;
+        }
+
+        .hero-badge {
+            padding: 0.2rem 0.7rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            border: 1px solid rgba(148, 163, 184, 0.8);
+            background: rgba(15, 23, 42, 0.85);
+        }
+
+        .hero-image-wrapper {
+            text-align: center;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 320px;
+            border-radius: 18px;
+            border: 1px solid rgba(148, 163, 184, 0.6);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8);
+        }
+
+        .image-caption {
+            font-size: 0.8rem;
+            color: #e2e8f0;
+            margin-top: 0.4rem;
+        }
+
+        h2 {
+            margin-top: 2.4rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.45rem;
+        }
+
+        h3 {
+            margin-top: 1.4rem;
+            margin-bottom: 0.4rem;
+            font-size: 1.1rem;
+        }
+
+        .section-description {
+            color: #cbd5f5;
+            margin-bottom: 0.8rem;
+        }
+
+        .two-columns {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: rgba(15, 23, 42, 0.95);
+            border-radius: 14px;
+            padding: 1rem 1.1rem;
+            border: 1px solid rgba(148, 163, 184, 0.4);
+        }
+
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        li {
+            margin-bottom: 0.3rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 0.7rem;
+            font-size: 0.9rem;
+        }
+
+        th, td {
+            padding: 0.55rem 0.45rem;
+            border: 1px solid rgba(148, 163, 184, 0.5);
+            text-align: left;
+        }
+
+        th {
+            background: rgba(15, 23, 42, 0.98);
+        }
+
+        .facts-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 0.7rem;
+            margin-top: 0.7rem;
+        }
+
+        .fact {
+            background: rgba(15, 23, 42, 0.96);
+            border-radius: 10px;
+            padding: 0.6rem 0.75rem;
+            border: 1px solid rgba(148, 163, 184, 0.4);
+            font-size: 0.88rem;
+        }
+
+        .fact span {
+            display: block;
+            font-weight: 600;
+            color: #e5e7eb;
+        }
+
+        .timeline {
+            border-left: 2px solid rgba(148, 163, 184, 0.8);
+            padding-left: 1.1rem;
+            margin-top: 0.7rem;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 0.9rem;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -9px;
+            top: 4px;
+            width: 10px;
+            height: 10px;
+            border-radius: 999px;
+            background: #22c55e;
+        }
+
+        .timeline-year {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: #9ca3af;
+            margin-bottom: 0.15rem;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 1rem;
+            margin-top: 0.8rem;
+        }
+
+        .gallery-item {
+            background: rgba(15, 23, 42, 0.96);
+            border-radius: 10px;
+            padding: 0.6rem;
+            border: 1px solid rgba(148, 163, 184, 0.4);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .gallery-item p {
+            font-size: 0.85rem;
+            margin-top: 0.35rem;
+            color: #e5e7eb;
+        }
+
+        .feedback {
+            margin-top: 1.8rem;
+        }
+
+        .feedback label {
+            display: block;
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .feedback textarea, .feedback input {
+            width: 100%;
+            padding: 0.55rem 0.7rem;
+            border-radius: 8px;
+            border: 1px solid rgba(148, 163, 184, 0.7);
+            background: rgba(15, 23, 42, 0.96);
+            color: #f9fafb;
+            font-family: inherit;
+            resize: vertical;
+            font-size: 0.9rem;
+        }
+
+        .feedback button {
+            margin-top: 0.7rem;
+            padding: 0.45rem 1rem;
+            border-radius: 999px;
+            border: none;
+            background: linear-gradient(135deg, #22c55e, #0ea5e9);
+            color: #020617;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .feedback button:hover {
+            opacity: 0.95;
+        }
+
+        .feedback-message {
+            margin-top: 0.4rem;
+            font-size: 0.85rem;
+            color: #a3e635;
+            display: none;
+        }
+
+        footer {
+            border-top: 1px solid rgba(148, 163, 184, 0.4);
+            padding: 1rem 1.2rem 2rem;
+            text-align: center;
+            color: #9ca3af;
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: #bfdbfe;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 1.5rem 1.3rem;
+            }
+
+            .hero-title {
+                font-size: 1.7rem;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 0.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="nav-container">
+        <div class="logo">Abbosbek Fayzullayev</div>
+        <nav>
+            <ul>
+                <li><a href="#asosiy">Asosiy</a></li>
+                <li><a href="#faktlar">Faktlar</a></li>
+                <li><a href="#kuchlar">Kuchlari</a></li>
+                <li><a href="#tarix">Tarixi</a></li>
+                <li><a href="#galereya">Galereya</a></li>
+                <li><a href="#mening-fikrlarim">Mening fikrim</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <!-- Asosiy qism -->
+    <section id="asosiy" class="hero">
+        <div>
+            <div class="tagline">Mening futbol qahramonim</div>
+            <h1 class="hero-title">Abbosbek Fayzullayev</h1>
+            <p class="hero-subtitle">
+                Maydonda qo‘rquv bilmaydigan, tezligi va texnikasi bilan muxlislarni hayratga soladigan o‘zbek futbolchisi.
+            </p>
+            <p>
+                Abbosbek Fayzullayev – menga ko‘ra, oddiy futbolchi emas, balki haqiqiy <strong>superqahramon</strong>.
+                Chunki u maydonda ham, maydondan tashqarida ham mehnat, sabr va ishonch bilan nimaga erishish mumkinligini
+                ko‘rsatib turibdi. U o‘yinida jasorat, iroda va hech qachon taslim bo‘lmaslik ruhini namoyon qiladi.
+            </p>
+            <p>
+                Uning har bir driblingi, tezkor qarori va golga olib kelgan paslari menga:
+                <em>"Agar mehnat qilsang, sen ham uddalaysan"</em> degan signalni beradi.
+            </p>
+
+            <div class="hero-highlights">
+                <span class="hero-badge">Pozitsiyasi: hujumkor yarim himoyachi</span>
+                <span class="hero-badge">Kuchli tomoni: dribling va kreativlik</span>
+                <span class="hero-badge">Menga beradigan ilhom: taslim bo‘lmaslik</span>
+            </div>
+        </div>
+
+        <div class="hero-image-wrapper">
+            <!-- Tasvir – tashqi link -->
+            <a href="https://www.transfermarkt.com/abbosbek-fayzullaev/profil/spieler/907754" target="_blank">
+                <img class="hero-image"
+                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo3cG3ukfAkrSnCGad2fhm7E8Uds2CTeF6N_ptCeJreeR99HYO2aA3g6GRVpd5j5QD3Z1jd06EfSCZtBtKedlN3V6wLUkLmeNb0fCCgw&s=10"
+                     alt="Abbosbek Fayzullayev timsoli">
+            </a>
+            <p class="image-caption">
+                Rasm umumiy futbolchi tasviri (Pexels). Abbosbek Fayzullayevning haqiqiy statistikasi va maʼlumotlari
+                uchun Transfermarkt / rasmiy manbalarga qarang.
+            </p>
+        </div>
+    </section>
+
+    <!-- Qisqa faktlar -->
+    <section id="faktlar">
+        <h2>Qisqa faktlar</h2>
+        <p class="section-description">
+            Abbosbek Fayzullayev haqida eslab qolishga oson bo‘lgan asosiy maʼlumotlar.
+        </p>
+
+        <div class="facts-list">
+            <div class="fact">
+                <span>To‘liq ismi:</span>
+                Abbosbek Fayzullayev
+            </div>
+            <div class="fact">
+                <span>Kasbi:</span>
+                Professional futbolchi
+            </div>
+            <div class="fact">
+                <span>Pozitsiyasi:</span>
+                Hujumkor yarim himoyachi / vinger
+            </div>
+            <div class="fact">
+                <span>Men uchun roli:</span>
+                Mehnat, fidoyilik va qat’iyat timsoli
+            </div>
+            <div class="fact">
+                <span>Kuchli jihatlari:</span>
+                Tezlik, dribling, qaror qabul qilish, jangovar ruh
+            </div>
+            <div class="fact">
+                <span>Ilhom beradigan tomoni:</span>
+                Yosh bo‘lishiga qaramay, maydonda mas’uliyatni o‘z zimmasiga olishi
+            </div>
+        </div>
+    </section>
+
+    <!-- Kuchlar va qobiliyatlar (superqahramon sifatida) -->
+    <section id="kuchlar">
+        <h2>Superqahramon sifatida kuchlari</h2>
+        <p class="section-description">
+            Bu yerda Abbosbekning futbolchi sifatidagi obyektiv kuchlaridan tashqari, men uni qahramon sifatida qanday
+            ko‘rishim ham aks etadi.
+        </p>
+
+        <div class="two-columns">
+            <div class="card">
+                <h3>Futbol maydonidagi kuchlari</h3>
+                <ul>
+                    <li><strong>Tezlik:</strong> raqib himoyachilarini ortda qoldirish, bo‘sh hududlarni tez egallash.</li>
+                    <li><strong>Dribling:</strong> birga-bir vaziyatlarda raqibni aldab o‘tish, kutilmagan fintlar.</li>
+                    <li><strong>Pas va ko‘rish:</strong> sheriklar pozitsiyasini tez ko‘ra olish, kesuvchi paslar berish.</li>
+                    <li><strong>Pressing:</strong> to‘pni tez qaytarib olish uchun old chiziqdan boshlab himoyaga yordam.</li>
+                    <li><strong>Zarba:</strong> aniqlik va kuchni birlashtirgan zarbalar, golga olib keluvchi zarbalar.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Qahramon sifatidagi ichki kuchi</h3>
+                <ul>
+                    <li><strong>Mehnatsevarlik:</strong> natijani tasodifga emas, mashg‘ulot va mehnatga bog‘lab ko‘rsatadi.</li>
+                    <li><strong>Jasorat:</strong> muhim o‘yinlarda ham qo‘rqmay tashabbusni o‘z zimmasiga oladi.</li>
+                    <li><strong>Motivatsiya berish:</strong> yoshlar uchun: “O‘zbekistonlik futbolchi ham yuqori darajaga chiqishi mumkin” degan ishonchni beradi.</li>
+                    <li><strong>Sabr:</strong> zaxirada qolgan paytlari ham tushkunlikka tushmasdan o‘z ustida ishlashi.</li>
+                    <li><strong>Vatanparvarlik:</strong> terma jamoa o‘yinlarida ko‘rinadigan fidoyiligi bilan.</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>Kuchlar jadvali (mening baholarim)</h3>
+        <p class="section-description">
+            Quyidagi jadval – Abbosbekning futbolchi va qahramon sifatidagi kuchlarini <strong>o‘zimcha 10 ballik
+            tizimda</strong> baholashim.
+        </p>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Kriteriy</th>
+                <th>Ball (10 dan)</th>
+                <th>Izoh</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Tezlik</td>
+                <td>9 / 10</td>
+                <td>Qanotda va bo‘sh hududga yugurishda juda tez.</td>
+            </tr>
+            <tr>
+                <td>Dribling</td>
+                <td>9 / 10</td>
+                <td>Bir necha raqibni ortda qoldira oladigan texnika.</td>
+            </tr>
+            <tr>
+                <td>O‘yinni ko‘rish</td>
+                <td>8 / 10</td>
+                <td>Yosh bo‘lishiga qaramay, kesuvchi paslar bera oladi.</td>
+            </tr>
+            <tr>
+                <td>Ruhiy barqarorlik</td>
+                <td>8 / 10</td>
+                <td>Katta o‘yinlarda ham o‘zini yo‘qotib qo‘ymaydi.</td>
+            </tr>
+            <tr>
+                <td>Mehnat va fidoyilik</td>
+                <td>10 / 10</td>
+                <td>Men uchun eng katta kuchi – hech qachon taslim bo‘lmasligi.</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Tarixi va men uchun ahamiyati -->
+    <section id="tarix">
+        <h2>Tarixi va men uchun ahamiyati</h2>
+        <p class="section-description">
+            Bu bo‘limda uning futbolchi sifatidagi yo‘li bilan birga, men uchun qanday qahramonga aylangani haqida yozilgan.
+        </p>
+
+        <div class="two-columns">
+            <div>
+                <h3>Futbolchilik yo‘li (umumiy)</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">Bolalik va futbolga qiziqish</div>
+                        <div>
+                            Futbolga oshno bo‘lib, kichik maydonlarda, maktab va akademiyalarda o‘ynashni boshlashi.
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">Professional daraja sari</div>
+                        <div>
+                            Yoshlar jamoalari, mahalliy klublar va keyinchalik katta sahnaga chiqish uchun qilgan mehnatlari.
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">Terma jamoa</div>
+                        <div>
+                            O‘zbekiston terma jamoasi safida o‘ynab, butun mamlakat eʼtiborini tortishi.
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">Yangi bosqichlar</div>
+                        <div>
+                            Legioner bo‘lish, kuchli ligalarda o‘ynash, xalqaro tajriba orttirish yoshligidan orzu qilingan natijalar ekanini ko‘rsatadi.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3>Nega u mening qahramonim?</h3>
+                <p>
+                    Men uchun Abbosbek Fayzullayev – shunchaki yaxshi futbolchi emas. U menga:
+                    <strong>har bir kichik qadam, har bir mashg‘ulot va har bir urinish</strong> kelajakdagi katta natijaga olib kelishi
+                    mumkinligini eslatadi. Uning hikoyasi: “O‘zbekistonda tug‘ilgan yigit ham dunyo sahnasiga chiqishi mumkin”
+                    degan ishonchni mustahkamlaydi.
+                </p>
+                <p>
+                    U maydonda raqibdan qo‘rqmay to‘p olib yuradi, xato qilsa ham keyingi hujumga yana boradi.
+                    Menga esa bu: hayotda yiqilsam ham, yana turib urinishim kerakligini ko‘rsatadi.
+                </p>
+                <p>
+                    Shu sababli men uni superqahramon sifatida tasavvur qilaman: u koinotni emas, lekin
+                    <em>o‘z orzularini himoya qila oladigan</em> va menga ham shunday qilishga ilhom beradigan qahramon.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galereya -->
+    <section id="galereya">
+        <h2>Galereya</h2>
+        <p class="section-description">
+            Bu yerda futbol va maydon kayfiyatini beradigan rasmlar bor. Haqiqiy Abbosbek suratlarini esa rasmiy
+            saytlardan, klublar sahifalaridan va yangiliklardan topish mumkin.
+        </p>
+
+        <div class="gallery">
+            <div class="gallery-item">
+                <a href="https://www.pexels.com/photo/soccer-player-kicking-ball-on-field-399187/"
+                   target="_blank">
+                    <img src="https://content-cdn.tribuna.uz/20250922/6ef6dd156e89e85de56589c9ce3a47cd7370714dc0c7a5a1f5c574d1598de9db-1200-675.jpg"
+                         alt="Futbolchi zarba berayotgan lahza">
+                </a>
+                <p>
+                    Abbosbek Fayzullayev mashg'ulotlarda
+                </p>
+            </div>
+
+            <div class="gallery-item">
+                <a href="https://www.pexels.com/photo/people-playing-soccer-46798/"
+                   target="_blank">
+                    <img src="https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg?auto=compress&cs=tinysrgb&w=800"
+                         alt="Futbol maydoni va to‘p">
+                </a>
+                <p>
+                    Bo‘sh maydon, yashil gazon – har bir katta hikoya aynan mana shu yerda boshlanadi.
+                </p>
+            </div>
+
+            <div class="gallery-item">
+                <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Fayzullaev_Kasymov_Fayziev.jpg/"
+                   target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Fayzullaev_Kasymov_Fayziev.jpg/250px-Fayzullaev_Kasymov_Fayziev.jpg"
+                         alt="Futbolchi orqadan ko‘rinish">
+                </a>
+                <p>
+                    Orqada raqam, oldinda orzular – mening qahramonim har safar maydonga ana shunday chiqadi deb tasavvur qilaman.
+                </p>
+            </div>
+
+            <div class="gallery-item">
+                <a href="https://storage.kun.uz/source/11/"
+                   target="_blank">
+                    <img src="https://storage.kun.uz/source/11/-yxYwIOQCBQNdGG9XNmErv99Jc02hon2.jpg"
+                         alt="Stadion va muxlislar">
+                </a>
+                <p>
+                    G'alabasini nishonlaytgan yosh qahramon.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mening fikrlarim / interaktiv qism -->
+    <section id="mening-fikrlarim" class="feedback">
+        <h2>Mening Abbosbek haqidagi fikrlarim</h2>
+        <p class="section-description">
+            Bu qism – men uchun. Bu yerga nega aynan Abbosbek Fayzullayevni qahramonim deb bilishim, u meni
+            qanday ilhomlantirishi haqida yozib borishim mumkin. Maʼlumotlar brauzer xotirasida saqlanadi.
+        </p>
+
+        <form id="feedbackForm">
+            <label for="myReason">Nega u sening qahramoning?</label>
+            <textarea id="myReason" name="myReason" rows="4"
+                      placeholder="Masalan: Uning maydondagi jasorati, mehnati, o‘yin uslubi menga shuni o‘rgatadi..."></textarea>
+
+            <label for="myGoal" style="margin-top:0.6rem;">U senga qanday maqsad qo‘yishga yordam berdi?</label>
+            <input type="text" id="myGoal" name="myGoal"
+                   placeholder="Masalan: Men ham har kuni mehnat qilishga qaror qildim">
+
+            <button type="submit">Mening fikrimni saqlab qo‘y</button>
+            <div id="feedbackMessage" class="feedback-message">
+                Fikring brauzering xotirasida saqlandi. Sahifani qayta ochganingda ham o‘chib ketmaydi.
+            </div>
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    Bu sahifa bitta HTML faylda tayyorlangan shaxsiy loyiha namunasidir.
+    Rasmlar – ochiq fotobanklardan, maʼlumotlar – umumiy tasvir sifatida yozilgan.
+    Sen xohlasang, matnlarni o‘zingning fikrlaring bilan to‘liq almashtirishing mumkin.
+</footer>
+
+<script>
+    // Foydalanuvchi fikrlarini localStorage ga saqlash
+    const form = document.getElementById('feedbackForm');
+    const reasonTextarea = document.getElementById('myReason');
+    const goalInput = document.getElementById('myGoal');
+    const messageEl = document.getElementById('feedbackMessage');
+
+    // Sahifa yuklanganda avvalgi ma'lumotlarni yuklash
+    window.addEventListener('DOMContentLoaded', function () {
+        const savedReason = localStorage.getItem('abbosbekMyReason');
+        const savedGoal = localStorage.getItem('abbosbekMyGoal');
+
+        if (savedReason) reasonTextarea.value = savedReason;
+        if (savedGoal) goalInput.value = savedGoal;
+    });
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const reason = reasonTextarea.value.trim();
+        const goal = goalInput.value.trim();
+
+        localStorage.setItem('abbosbekMyReason', reason);
+        localStorage.setItem('abbosbekMyGoal', goal);
+
+        messageEl.style.display = 'block';
+        setTimeout(() => {
+            messageEl.style.display = 'none';
+        }, 3000);
+    });
+</script>
+
+</body>
+</html>
