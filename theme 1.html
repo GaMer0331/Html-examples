@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Mening Bosh Sahifam</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Har safar tab ochilganda tabiat manzarasi o'zgaradi */
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://source.unsplash.com/random/1920x1080?nature,dark');
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+        }
+
+        .container { text-align: center; }
+
+        #clock {
+            font-size: 8rem;
+            font-weight: bold;
+            text-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        #greeting {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .links {
+            margin-top: 30px;
+        }
+
+        .links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 10px 20px;
+            border: 1px solid white;
+            border-radius: 20px;
+            transition: 0.3s;
+            background: rgba(255,255,255,0.1);
+        }
+
+        .links a:hover {
+            background: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div id="greeting">Xush kelibsiz!</div>
+        <div id="clock">00:00:00</div>
+        
+        <div class="links">
+            <a href="https://github.com">GitHub</a>
+            <a href="https://google.com">Google</a>
+            <a href="https://youtube.com">YouTube</a>
+        </div>
+    </div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+            
+            // Vaqtga qarab salomlashish
+            let greet = "Xayrli tun";
+            if(hours < 12) greet = "Xayrli tong";
+            else if(hours < 18) greet = "Xayrli kun";
+            else greet = "Xayrli kech";
+            document.getElementById('greeting').textContent = greet;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>

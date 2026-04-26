@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <style>
+        body {
+            margin: 0;
+            background: #0a0a0a;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #00ffcc;
+            font-family: 'Courier New', monospace;
+        }
+        #canvas1 {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+        }
+        .clock-container {
+            z-index: 10;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid #00ffcc;
+            box-shadow: 0 0 30px #00ffcc;
+            backdrop-filter: blur(5px);
+        }
+        h1 { font-size: 5rem; margin: 0; }
+        p { letter-spacing: 5px; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+    <canvas id="canvas1"></canvas>
+    <div class="clock-container">
+        <p id="date"></p>
+        <h1 id="time">00:00:00</h1>
+    </div>
+
+    <script>
+        // Soat funksiyasi
+        function showTime(){
+            let date = new Date();
+            let h = date.getHours(); 
+            let m = date.getMinutes(); 
+            let s = date.getSeconds();
+            h = (h < 10) ? "0" + h : h;
+            m = (m < 10) ? "0" + m : m;
+            s = (s < 10) ? "0" + s : s;
+            document.getElementById("time").innerText = h + ":" + m + ":" + s;
+            document.getElementById("date").innerText = date.toDateString();
+            setTimeout(showTime, 1000);
+        }
+        showTime();
+
+        // Fon uchun oddiy zarrachalar effekti (Canvas)
+        const canvas = document.getElementById('canvas1');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        let particles = [];
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 1;
+                this.speedX = Math.random() * 1 - 0.5;
+                this.speedY = Math.random() * 1 - 0.5;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.x > canvas.width) this.x = 0;
+                if (this.x < 0) this.x = canvas.width;
+                if (this.y > canvas.height) this.y = 0;
+                if (this.y < 0) this.y = canvas.height;
+            }
+            draw() {
+                ctx.fillStyle = '#00ffcc';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function init() {
+            for (let i = 0; i < 100; i++) {
+                particles.push(new Particle());
+            }
+        }
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => { p.update(); p.draw(); });
+            requestAnimationFrame(animate);
+        }
+        init(); animate();
+    </script>
+</body>
+</html>
