@@ -1,9 +1,0 @@
-<html>
-<body>
-<a 
-        href="Beginning.html" 
-    >
-        Kirish
-    </a>
-</body>
-</html>
